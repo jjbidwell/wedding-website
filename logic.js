@@ -9,7 +9,7 @@ $(document).ready(function(){
     var audio = document.getElementById('autoplay');
     function playAudio() {
         if (isPlaying === false){
-       //audio.play();
+        audio.play();
         console.log('music');
         isPlaying = true;
         }
@@ -22,10 +22,41 @@ $(document).ready(function(){
 //Set interval for broken timer
     var minutes = Number($('#minutes').html());
     var seconds = Number($('#seconds').html());   
-    console.log(minutes);
-    console.log(seconds);
-    //var 
-    //setInterval()
+
+//Broken seconds
+    function brokenSeconds(){
+        setInterval(function(){
+            if(seconds === 1000){
+                seconds = 0;
+            } else {
+                seconds += 1;
+                $('#seconds').html(seconds);
+            }
+        }, 50);
+            
+    
+    }
+
+//Broken minute sub-functions
 
 
+
+
+    var randomNumber = 0; 
+    function brokenMinutes(){
+        setInterval(function(){
+            randomNumber = Math.floor((Math.random()*60) - 61); 
+            $('#minutes').html(randomNumber);
+                setTimeout(function(){
+                    $('#minutes').html(-21);
+                }, 200);
+        }, 1000);
+    }
+brokenSeconds();
+brokenMinutes();
+
+          /*  setInterval(function(){
+                $('#minutes').html(-21);
+                console.log('working')
+            }, 50); */
   });
