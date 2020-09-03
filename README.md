@@ -1,1 +1,1 @@
-# wedding-site
+Wedding website for Josh and Ariana. This is a joke website.

@@ -1,0 +1,13 @@
+h1 {
+    color: forestgreen;
+}
+
+#autoplay {
+    display: none;
+}
+
+.timer {
+    display: inline;
+    color: red;
+    font-size: 50px;
+}
