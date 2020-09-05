@@ -21,7 +21,7 @@ body {
     background-image: url("../images/heart-background.jpg");
     background-color: hotpink;
     background-repeat: repeat;
-    background-size: 200px 100px;
+    background-size: 500px 100px;
   }
   
   div{
@@ -38,7 +38,7 @@ body {
   .header {
     color: #f70539;
     background-color: #32de03;
-    width: 40%;
+    width: 70%;
     margin: 45px 0px;
     font-size: 60px;
   }
@@ -196,4 +196,13 @@ body {
   
   #joke{
     color: #ffd500;
+  }
+
+  #like {
+    width: 80%;
+    height: 250px;
+    background-color: hotpink;
+    color: darkblue;
+    font-size: 36px;
+    margin: 50px;
   }
