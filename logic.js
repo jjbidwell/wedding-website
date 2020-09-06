@@ -14,7 +14,7 @@ $('#yes').on('click', function(){
 
 //Autoplay music
     var songs = ['','./assets/music/careless.mp3', './assets/music/every-step.mp3', './assets/music/hallelujah.mp3', './assets/music/hobbit.mp3', './assets/music/myheart.mp3', './assets/music/take-my-breath.mp3'];
-    var randomSong = songs[Math.floor(Math.random() * 7) + 1]
+    var randomSong = songs[Math.floor(Math.random() * 6) + 1]
     var isPlaying = false;
 
     $('#autoplay').attr('src', randomSong);
