@@ -1,10 +1,16 @@
 $(document).ready(function(){
 
-//Critical error message
+//Critical error message and age verification
 
-setTimeout(function(){
-    alert('CATASTROPHIC ERROR: C/users/bongilla69/directory/2684841/garbage-files/less_than_jake_full_Dicography_torrent/autodownload.exe CAN NOT RUN. MAKE SURE YOUR WINDOWS 95 VERSION IS UP TO DATE AND TRY AGAIN')
-}, 30000);
+
+$('#yes').on('click', function(){
+    $('#age-check').addClass('hide');
+    setTimeout(function(){
+        alert('CATASTROPHIC ERROR: C/users/bongilla69/directory/2684841/garbage-files/less_than_jake_full_Dicography_torrent/autodownload.exe CAN NOT RUN. MAKE SURE YOUR WINDOWS 95 VERSION IS UP TO DATE AND TRY AGAIN')
+    }, 30000);
+    
+})
+
 
 //Autoplay music
     var songs = ['','./assets/music/careless.mp3', './assets/music/every-step.mp3', './assets/music/hallelujah.mp3', './assets/music/hobbit.mp3', './assets/music/myheart.mp3', './assets/music/take-my-breath.mp3'];
