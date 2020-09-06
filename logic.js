@@ -7,15 +7,15 @@ setTimeout(function(){
 }, 30000);
 
 //Autoplay music
-    var songs = ['','./assets/music/careless.mp3', './assets/music/every-step.mp3', './assets/music/hallelujah.mp3', './assets/music/hobbit.mp3', './assets/music/myheart.mp3'];
-    var randomSong = songs[Math.floor(Math.random() * 5) + 1]
+    var songs = ['','./assets/music/careless.mp3', './assets/music/every-step.mp3', './assets/music/hallelujah.mp3', './assets/music/hobbit.mp3', './assets/music/myheart.mp3', './assets/music/take-my-breath.mp3'];
+    var randomSong = songs[Math.floor(Math.random() * 7) + 1]
     var isPlaying = false;
 
     $('#autoplay').attr('src', randomSong);
     var audio = document.getElementById('autoplay');
     function playAudio() {
         if (isPlaying === false){
-        //audio.play();
+        audio.play();
         console.log('music');
         isPlaying = true;
         }
@@ -65,19 +65,34 @@ brokenMinutes();
                 $('#antelope-eat').addClass("hide");
               }, 1000);
 
+
+            var cheetahRun = false;
             
             $('#run-btn').click(function(){
-              $('#cheetah').addClass("hide");
-              $('#cheetah-run').removeClass("hide");
-              $('#cheetah-run').animate({left: '+=77%'}, 2000);
+                if (cheetahRun === false){
+                    $('#cheetah').addClass("hide");
+                    $('#cheetah-run').removeClass("hide");
+                    $('#cheetah-run').animate({left: '+=77%'}, 2000);
               
-              setInterval(function(){
-                $('#cheetah-run').addClass('hide');
-                $('#antelope').addClass('hide');
-                $('#antelope-eat').removeClass('hide');
-                $('#cool').html('cool!!!');
-              }, 2000)
+                    setTimeout(function(){
+                        $('#cheetah-run').addClass('hide');
+                        $('#antelope').addClass('hide');
+                        $('#antelope-eat').removeClass('hide');
+                        $('#run-btn').html('cool!!!')
+                        $('#cool').html('cool!!!');
+                    }, 2000);
+                    cheetahRun = true;
+                } else if (cheetahRun === true){
+                    $('#cheetah').removeClass("hide");
+                    $('#antelope').removeClass('hide');
+                    $('#run-btn').html('click to make the cheetah run!!!!')
+                    $('#cool').html('');
+                    $('#cheetah-run').css({'position': 'relative', 'left': "0"});
+                    cheetahRun = false;
+                };
             });
+
+
              
               var jokes = ['I asked God for a bike, but I know God doesn\'t work that way so I stole a bike and asked for forgiveness.',
             'I hate Russian dolls, they\'re so full of themselves.' ,
@@ -112,4 +127,12 @@ brokenMinutes();
                 jokeNumber=Math.floor(Math.random()*38)
                $('#joke').html(jokes[jokeNumber])
               })
+
+              $('#like').on('click', function(){
+                $('#like').css('background-color', '#728c13');
+                $('#broken-tag').html('C:/Users/joshb/images/crying-face.jpg');
+                $('#like-txt').html('thank u 4 liking!!!!')
+              });
+
+
   });

@@ -10,6 +10,10 @@
     font-size: 50px;
 }
 
+#clock {
+  float: right;
+}
+
 #error {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
@@ -66,8 +70,7 @@ body {
     width: 500px;
     height: 600px;
     position: relative;
-    left: -500px;
-    bottom: -425px;
+    left: 2500px;
   }
   
   #giraffe {
@@ -205,4 +208,24 @@ body {
     color: darkblue;
     font-size: 36px;
     margin: 50px;
+  }
+
+  #library {
+    position: relative;
+    left: 1200px;
+
+  }
+
+  #neeson {
+    position: relative;
+    left: 500px;
+  }
+
+  #peter {
+    width: 1500px;
+  }
+
+  #smiley-1 {
+    position: relative;
+    left: -150px;
   }
