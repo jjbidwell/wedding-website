@@ -77,13 +77,16 @@ brokenMinutes();
             $('#run-btn').click(function(){
                 if (cheetahRun === false){
                     $('#cheetah').addClass("hide");
+                    $('#cheetah-game').addClass('hide');
                     $('#cheetah-run').removeClass("hide");
                     $('#cheetah-run').animate({left: '+=77%'}, 2000);
+
               
                     setTimeout(function(){
                         $('#cheetah-run').addClass('hide');
                         $('#antelope').addClass('hide');
                         $('#antelope-eat').removeClass('hide');
+                        $('#cheetah-game').removeClass('hide')
                         $('#run-btn').html('cool!!!')
                         $('#cool').html('cool!!!');
                     }, 2000);
