@@ -1,0 +1,23 @@
+{
+  "name": "wedding-website",
+  "version": "2.0.0",
+  "description": "The most perfect wedding website in the world! MySQL database freatures coming soon. ",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm run lint",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjbidwell/wedding-website.git"
+  },
+  "author": "Joshua Bidwell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jjbidwell/wedding-website/issues"
+  },
+  "homepage": "https://github.com/jjbidwell/wedding-website#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
